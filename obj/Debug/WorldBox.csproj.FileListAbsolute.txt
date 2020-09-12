@@ -1,0 +1,12 @@
+C:\Users\Дмитрий\source\repos\WorldBox\WorldBox\bin\Debug\WorldBox.exe.config
+C:\Users\Дмитрий\source\repos\WorldBox\WorldBox\bin\Debug\WorldBox.exe
+C:\Users\Дмитрий\source\repos\WorldBox\WorldBox\bin\Debug\WorldBox.pdb
+C:\Users\Дмитрий\source\repos\WorldBox\WorldBox\bin\Debug\SimplexNoise.dll
+C:\Users\Дмитрий\source\repos\WorldBox\WorldBox\obj\Debug\WorldBox.csprojAssemblyReference.cache
+C:\Users\Дмитрий\source\repos\WorldBox\WorldBox\obj\Debug\WorldBox.Form1.resources
+C:\Users\Дмитрий\source\repos\WorldBox\WorldBox\obj\Debug\WorldBox.Properties.Resources.resources
+C:\Users\Дмитрий\source\repos\WorldBox\WorldBox\obj\Debug\WorldBox.csproj.GenerateResource.cache
+C:\Users\Дмитрий\source\repos\WorldBox\WorldBox\obj\Debug\WorldBox.csproj.CoreCompileInputs.cache
+C:\Users\Дмитрий\source\repos\WorldBox\WorldBox\obj\Debug\WorldBox.csproj.CopyComplete
+C:\Users\Дмитрий\source\repos\WorldBox\WorldBox\obj\Debug\WorldBox.exe
+C:\Users\Дмитрий\source\repos\WorldBox\WorldBox\obj\Debug\WorldBox.pdb
