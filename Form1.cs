@@ -46,7 +46,7 @@ namespace WorldBox
         //получение цвета пикселя (всеровно что ((Bitmap)canvas.Image).GetPixel(x, y);)
         public Color GetPixel(int x,int y)
         {
-            return ((Bitmap)canvas.Image).GetPixel(x, y);
+            return Color.Black;
         }
         //рисование пикселя
         public void DrawPixel(Color color,int x,int y)
@@ -60,6 +60,7 @@ namespace WorldBox
             InitializeComponent();
             canvas = map;
             controller = canvas.CreateGraphics();
+            controller.FillRectangle(new SolidBrush(Color.Black), 0, 0, canvas.Width, canvas.Height);
         }
 
         public void Generate()
@@ -67,6 +68,7 @@ namespace WorldBox
             //старт генерации
 
             //сюда добавляются методы-генераторы
+            GenerateLandshaftMap();
             
 
             //конец генерации
