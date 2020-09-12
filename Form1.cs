@@ -24,20 +24,29 @@ namespace WorldBox
             Noise.Seed = rnd.Next();
 
             //двухмерный массив с шумом 
-            float[,] noise = Noise.Calc2D(700,700,0.05f);
+            float[,] noise = Noise.Calc2D(700,700,0.01f);
+
+            Noise.Seed = rnd.Next();
+            float[,] noise2 = Noise.Calc2D(700, 700, 0.01f);
 
             //перебор массива
-            for(int y = 0; y < 500;y++)
+            for (int y = 0; y < 500;y++)
             {
                 for(int x = 0; x < 500; x++)
                 {
                     //получаем точку с шума
-                    float pixelNoise = noise[y, x];
+                    float pixelNoise = (noise[y, x] + noise2[y, x])/4;
+                    pixelNoise /= 2.5f;
 
                     Color currentPixelColor = GetPixel(x, y);
 
+                    //каналы цвета
                     //добавляем яркости взависимости от значения точки из шума
-                    currentPixelColor = Color.FromArgb(currentPixelColor.R+(int)pixelNoise, currentPixelColor.G + (int)pixelNoise, currentPixelColor.B + (int)pixelNoise);
+                    int R = currentPixelColor.R + (int)pixelNoise > 255 ? 255 : currentPixelColor.R + (int)pixelNoise;
+                    int G = currentPixelColor.G + (int)pixelNoise > 255 ? 255 : currentPixelColor.G + (int)pixelNoise;
+                    int B = currentPixelColor.B + (int)pixelNoise > 255 ? 255 : currentPixelColor.B + (int)pixelNoise;
+                    
+                    currentPixelColor = Color.FromArgb(R,G,B);
 
                     DrawPixel(currentPixelColor, x, y);
                 }
@@ -46,7 +55,7 @@ namespace WorldBox
         //получение цвета пикселя (всеровно что ((Bitmap)canvas.Image).GetPixel(x, y);)
         public Color GetPixel(int x,int y)
         {
-            return Color.Black;
+            return Color.DarkGreen;
         }
         //рисование пикселя
         public void DrawPixel(Color color,int x,int y)
